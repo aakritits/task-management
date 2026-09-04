@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fbfaf8;
+  --color-surface: #ffffff;
+  --color-ink: #1b1b25;
+  --color-ink-soft: #55555f;
+  --color-ink-faint: #8a8a94;
+  --color-line: #e9e6e0;
+  --color-line-strong: #ddd9d1;
+
+  --color-iris: #5a4bda;
+  --color-iris-hover: #4c3ecb;
+  --color-iris-soft: #eeecfb;
+  --color-mint: #0fb5a6;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-geist-sans), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --shadow-card: 0 1px 2px rgba(27, 27, 37, 0.04),
+    0 8px 24px -12px rgba(27, 27, 37, 0.12);
+  --shadow-float: 0 24px 60px -24px rgba(27, 27, 37, 0.22);
+
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-iris);
+  color: #fff;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
