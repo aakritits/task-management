@@ -3,6 +3,8 @@ import { Hero } from "@/components/hero";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { Features } from "@/components/features";
 import { Workflow } from "@/components/workflow";
+import { Pricing } from "@/components/pricing";
+import { Changelog } from "@/components/changelog";
 import { Cta } from "@/components/cta";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -21,6 +23,8 @@ export default function Home() {
         <LogoMarquee />
         <Features />
         <Workflow />
+        <Pricing />
+        <Changelog />
         <Cta />
       </main>
       <SiteFooter />

@@ -46,6 +46,112 @@ export const features: Feature[] = [
   },
 ];
 
+export type PricingPlan = {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  cta: string;
+  highlighted?: boolean;
+};
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    name: "Starter",
+    price: "Free",
+    period: "for up to 5 people",
+    description: "Everything a small team needs to get off spreadsheets.",
+    features: [
+      "Unlimited boards",
+      "Shared timeline",
+      "Task threads",
+      "Import from Trello or Asana",
+    ],
+    cta: "Start free",
+  },
+  {
+    name: "Team",
+    price: "$9",
+    period: "per person / month",
+    description: "For teams ready to drop the status meeting.",
+    features: [
+      "Everything in Starter",
+      "Unlimited members",
+      "Timeline dependencies",
+      "Guest collaborators",
+      "Priority support",
+    ],
+    cta: "Start free trial",
+    highlighted: true,
+  },
+  {
+    name: "Business",
+    price: "$19",
+    period: "per person / month",
+    description: "For organizations that need control at scale.",
+    features: [
+      "Everything in Team",
+      "SSO and SCIM",
+      "Audit log",
+      "Custom roles and permissions",
+      "Dedicated onboarding",
+    ],
+    cta: "Talk to sales",
+  },
+];
+
+export type ChangelogEntry = {
+  version: string;
+  date: string;
+  tag: "New" | "Improved" | "Fixed";
+  title: string;
+  items: string[];
+};
+
+export const changelogEntries: ChangelogEntry[] = [
+  {
+    version: "2.4",
+    date: "Aug 2026",
+    tag: "New",
+    title: "Timeline dependencies",
+    items: [
+      "Link tasks so moving one shifts everything downstream",
+      "Warn when a dependency would miss its deadline",
+    ],
+  },
+  {
+    version: "2.3",
+    date: "Jun 2026",
+    tag: "Improved",
+    title: "Faster imports",
+    items: [
+      "Trello and Asana imports now run in the background",
+      "Status and owner mapping is editable before you confirm",
+    ],
+  },
+  {
+    version: "2.2",
+    date: "Apr 2026",
+    tag: "New",
+    title: "Guest collaborators",
+    items: [
+      "Invite clients or contractors to a single board",
+      "Guests see only the tasks they are tagged on",
+    ],
+  },
+  {
+    version: "2.1",
+    date: "Feb 2026",
+    tag: "Fixed",
+    title: "Reliability pass",
+    items: [
+      "Fixed threads occasionally missing new replies in real time",
+      "Fixed timeline drag on Firefox misplacing task dates",
+    ],
+  },
+];
+
 export const workflowSteps = [
   {
     step: "01",
