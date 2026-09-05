@@ -101,7 +101,7 @@ export function HeroVisual() {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 gap-3 rounded-xl bg-paper p-3">
+        <div className="md:grid md:grid-cols-3 grid grid-cols-2 gap-3 rounded-xl bg-paper p-3">
           {columns.map((column, colIndex) => (
             <div key={column.name} className="flex flex-col gap-2.5">
               <div className="flex items-center justify-between px-1">

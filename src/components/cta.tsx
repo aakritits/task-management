@@ -41,7 +41,7 @@ export function Cta() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@team.com"
                 aria-label="Work email"
-                className="h-12 flex-1 rounded-full border border-white/15 bg-white/10 px-5 text-sm text-white placeholder:text-white/50 focus:border-white/40 focus:outline-none"
+                className=" flex-1 py-3 rounded-full border border-white/15 bg-white/10 px-5 text-sm text-white placeholder:text-white/50 focus:border-white/40 focus:outline-none"
               />
               <Button type="submit" size="lg" className="shrink-0">
                 {submitted ? (
