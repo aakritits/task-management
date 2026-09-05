@@ -51,7 +51,3 @@ src/
     cx.ts             className joiner
     motion.ts         shared easing curve
 ```
-
-## Notes on the build
-
-See [NOTES.md](./NOTES.md) for the design and technical decisions.
